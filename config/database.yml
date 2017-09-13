@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  host: localhost
+
+development:
+  <<: *default
+  database: ror_simple_task_development
+
+test:
+  <<: *default
+  database: ror_simple_task_test
