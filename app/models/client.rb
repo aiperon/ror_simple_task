@@ -1,8 +1,8 @@
 class Client < ApplicationRecord
-  MONTH_PRICE=1000
+  DAY_PRICE=100
 
-  def decrease_balance
-    balance -= MONTH_PRICE
+  def balance_reduction!
+    balance -= Client::DAY_PRICE
     balance = 0 if balance < 0
     save
   end
